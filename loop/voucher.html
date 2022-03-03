@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loop/voucher.css">
+    <link rel="stylesheet" href="/bootstrap-5.1.1-dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body> 
+       <!-- voucher starts here -->
+    <div id="voucherPhase" class="m-3 sticky-top " style="   overflow-x: hidden; z-index: 3;margin-top: -390px;">
+        <div class=" rounded-top"
+            style="position: fixed; background-color: #12a4d9 ;border-radius: 22px 0px 0px 22px ;margin-top: 2px;margin-left: -1.5px; ">
+            <h2 class="display-6 px-2 text-light " style="font-size: 41px;">Generate Voucher</h2>
+            <input type="text" class="form-control " style="margin-left: 40px;" name="" id="inp">
+
+            <select name="" id="netWork" class="my-3 d-flex justify-content-center text-light">
+                <option value="MTN" id="mtn">MTN</option>
+                <option value="Glo" id="glo">Glo</option>
+                <option value="Airtel" id="airtel">Airtel</option>
+                <option value="9mobile" id="mobo">9mobile</option>
+            </select>
+
+            <select name="" id="amoUnt" class="my-3 d-flex justify-content-center">
+                <option value="#100">100</option>
+                <option value="#200">200</option>
+                <option value="#500">500</option>
+                <option value="#1000">1000</option>
+            </select>
+            <button onclick="myGen()" id="genn" class="my-3 d-flex justify-content-center">Generate</button>
+            <button id="genn" class="my-3 d-flex justify-content-center" onclick="myGet()"
+                style="width: 195px;">Get</button>
+        </div>
+        <div id="display" style="color: white;z-index: 20 !important; margin-top: 320px;">
+        </div>
+    </div>
+
+    <!-- voucher ends here -->
+
+    
+
+<section>
+    <!--  my blank phone starts here  -->
+    <div>
+        <div id="phone1" class="m-3 sticky-top " ondblclick="myTouch()"  style="overflow-x: hidden; z-index: 3;margin-top: -648px !important;margin-left: 420px !important;">
+            
+        </div>
+        <!--  my blank phone ends  here  -->
+
+        <!--  my lockScreen phone starts here  -->
+    <div id="phone_2"  ondblclick="myTouchOne()" style="display: none;margin-top: -648px;margin-left: 420px;">
+        <div id="myTimmy">
+
+        </div>
+        <div style="margin-left: 120px; color: white;margin-top: -10px;" >
+            <span id="myDay" style="color:white;"></span>,  <span id="myMonth" style="color: white;"></span> <span id="myNum" style="color: white;"></span>
+        </div>
+        <div id="notifi">
+
+        </div>
+        <div id="notifi">
+
+        </div>
+        <img src="/loop/images/phonenny-removebg-preview.png" onclick="phonnyLock()" alt="" style="height: 40px; width: 40px;margin-top: 310px;">
+  
+  <img src="/loop/images/cam-removebg-preview.png" alt=""  style="height: 40px; width: 40px;margin-top: 310px; margin-left: 240px;">
+       
+    </div>
+        <!--  my lockScreen phone ends here  -->
+         
+
+        <!-- my password starts  here -->
+        <div id="phone_3" class="m-3 sticky-top "  style="display:none;margin-top: -648px;margin-left: 420px;">
+            <div id="passyInfo" style="color: white; transform: translateY(190px);margin-left: 110px;">Enter your pin
+
+            </div>
+            <div id="flow" style="color: white;transform: translateY(190px);margin-left: 110px;""></div>
+            <input type="text" id="inpPass"> <br>
+            <button onclick="myPass(1)" id="bbtn1" >1</button>
+            <button onclick="myPass(2)" id="bbtn1">2</button>
+            <button onclick="myPass(3)" id="bbtn1">3</button> <br>
+            <button onclick="myPass(4)" id="bbtn2">4</button>
+            <button onclick="myPass(5)" id="bbtn2">5</button>
+            <button onclick="myPass(6)" id="bbtn2">6</button> <br>
+            <button onclick="myPass(7)" id="bbtn3">7</button>
+            <button onclick="myPass(8)" id="bbtn3">8</button>
+            <button onclick="myPass(9)" id="bbtn3">9</button> <br>
+            <button onclick="myPass(0)" id="b0">0</button>
+            <button onclick="myOkeyy()" id="ok">OK</button>
+
+            
+        </div>
+        <!-- my password ends here -->
+ 
+        <!-- unlock screen starts here -->
+        <div id="phone_4" class="m-3 sticky-top "  style=" display: none; margin-top: -648px;margin-left: 420px;">
+           
+            <div id="myTim2" >
+            </div>
+            <div id="myTim3">
+            </div>
+             <div style="margin-left: 120px;margin-top: -20px;">
+                 <span id="dayMi"></span>, <span id="monthMi"></span> <span id="myNum1"></span>
+             </div>
+
+            <img src="/loop/images/phone-removebg-preview (1).png" onclick="myPhone()" alt="" style="height: 40px;width: 50px;margin-top: 280px;margin-left: 14px;">
+            <img src="/loop/images/meassage-removebg-preview.png" alt="" style="height: 40px;width: 40px;margin-top: 280px;margin-left: 14px;">
+            <img src="/loop/images/allMenu-removebg-preview.png" alt="" style="height: 50px;width: 50px;margin-top: 280px;margin-left: 14px;">
+            <img src="/loop/images/cangen-removebg-preview.png" alt="" style="height: 47px;width: 47px;margin-top: 281px;margin-left: 14px;">
+            <img src="/loop/images/chrome-removebg-preview.png" alt="" style="height: 46px;width: 60px;margin-left: 4px;margin-top: 280px;">
+           
+           
+            
+        </div>
+        <!-- unlock screen ends here -->
+
+        <!-- dialer starts here -->
+        <div id="phone_5" class="m-3 sticky-top "  style=" display: none; margin-top: -648px;margin-left: 420px;">
+            <div id="myNetWorkShow">
+            </div>
+            <input type="text" name="" id="inpDig"  style="text-align: center; font-size: 26px; color: blue;box-shadow: 0px 50px 50px 0px red;"> <br>
+            <button id="bbtn" onclick="myDial(1)">1 </button> 
+            <button id="bbtn" onclick="myDial(2)">2 <span style="font-size: 10px;">ABC</span></button> 
+            <button id="bbtn" onclick="myDial(3)">3 <span style="font-size: 10px;">DEF</span></button><br>
+            <button id="bbtn"  style="box-shadow: 0px 50px 50px 0px red;" onclick="myDial(4)">4 <span style="font-size: 10px;">GHI</span></button>
+            <button id="bbtn"  style="box-shadow: 0px 50px 50px 0px red;" onclick="myDial(5)">5 <span style="font-size: 10px;">JKL</span></button>
+            <button id="bbtn"   style="box-shadow: 0px 50px 50px 0px red;" onclick="myDial(6)">6 <span style="font-size: 10px;">MNO</span></button> <br>
+            <button id="bbtn"  style="box-shadow: 0px 50px 50px 0px red;" onclick="myDial(7)">7 <span style="font-size: 10px;">PQRS</span></button>
+            <button id="bbtn"  style="box-shadow: 0px 50px 50px 0px red;" onclick="myDial(8)">8 <span style="font-size: 10px;">TUV</span></button>
+            <button id="bbtn" onclick="myDial(9)">9 <span style="font-size: 10px;">WXYZ</span></button> <br>
+            <button id="bbtn" onclick="myDial( '*' )">*</button>
+            <button id="bbtn"  onclick="myDial(0)">0</button>
+            <button id="bbtn" onclick="myDial( '#' )">#</button><br>
+            <img src="/loop/images/del-removebg-preview.png" alt="" onclick="del() " style="height: 50px;width: 50px;transform: translateY(-300px); margin-left: 270px; background-color:black; border-radius: 50%;">
+            <img src="/loop/images/phone-removebg-preview (1).png" onclick="callOut()" alt="" style="height: 70px;width: 90px;margin-top: 12px;margin-left: 120px;">
+                      
+            
+        </div>
+        <!-- invalid phone -->
+        <div id="phone_5b" style="display: none;">
+            <div id="report" style="transform: translateY(20px);">
+                  
+                  
+            </div>
+            <p style="transform: translateY(-92px);margin-left: 220px;font-size: 30px;" onclick="myBack()">Ok</p>
+
+        </div>
+        <!-- invalid phone ends here -->
+
+        <!-- dialer ends here  -->
+  <!-- selection of network starts here -->
+ 
+       
+        <div id="selectNetwork"  style="display: none;">
+            
+           <div style="background-color: black; transform: translateY(180px); width: 250px;height: 190px;margin-left: 40px;">
+            <h3 class="display-6 text-primary" style="font-size: 17px;" >Call with</h3>
+            <button id="mtn1" onclick="myMTN()"  >MTN</button> <br>
+            <button id="glo1">Glo</button><br>
+            <button id="airtel1">Airtel</button> <br>
+            <button id="mobile">9mobile</button>
+        
+           </div> 
+               <span><img src="/loop/images/sim-removebg-preview.png" alt="" style="background-color:yellow;height: 30px; width: 30px;border-radius: 50%;transform: translateY(17px);margin-left: 50px;"></span> <br>
+               <span><img src="/loop/images/sim-removebg-preview.png" alt="" style="background-color:green;height: 30px; width: 30px;border-radius: 50%;transform: translateY(20px);margin-left: 50px;"></span> <br>
+               <span><img src="/loop/images/sim-removebg-preview.png" alt="" style="background-color:red;height: 30px; width: 30px;border-radius: 50%;transform: translateY(30px);margin-left: 50px;"></span><br>
+               <span><img src="/loop/images/sim-removebg-preview.png" alt="" style="background-color:white;height: 30px; width: 30px;border-radius: 50%;transform: translateY(40px);margin-left: 50px;"></span> 
+
+        </div>
+
+        
+            <!-- selection network ends here -->
+
+    <!-- mr A calling -->
+    <div id="phone_6" class="m-3 sticky-top "  style=" display: none; margin-top: -648px;margin-left: 420px;">
+        <img src="/loop/images/avat-removebg-preview.png" alt="" style="height: 160px;width: 220px;margin-left: 50px;margin-top: 50px;">
+        <div id="caLLer" style="color: white; margin-left: 110px;">
+            
+        </div>
+        <p style="margin-top: -49px;transform: translateX(133px);">Nigera</p>
+        
+       
+           <img src="/loop/images/end_call-removebg-preview.png" onclick="myEnd()" alt="" style="height: 60px;width: 60px;margin-top: 200px;margin-left: 129px;">        
+    </div>
+<!-- mr a calling end -->
+
+<!-- mr B receiving -->
+<div id="phone_7" class="m-3 sticky-top "  style=" display: none; margin-top: -648px;margin-left: 420px;">
+    <img src="/loop/images/avater2-removebg-preview.png" alt="" srcset="" style="height: 160px;width: 220px;margin-left: 50px;margin-top: 50px;">
+    <div id="callerOne"></div>
+       <h1 style="margin-left: 90px; font-size: 23px;">08134687971</h1>
+       <div id="sim"></div>
+       <div><img src="/loop/images/sim-removebg-preview.png" alt="" style="height: 40px; width: 40px;margin-top: -50px;margin-left: 120px;"></div>
+       <p style="margin-top: -28px;margin-left: 132px;">Calling.....</p>
+  <img src="/loop/images/end_call-removebg-preview.png" alt="" onclick="myEnd()" style="height: 55px; width: 55px;margin-top: 180px;margin-left: 28px;">
+  <img src="/loop/images/pickup-removebg-preview.png" alt="" srcset="" style="height: 55px; width: 55px;margin-top: 180px;margin-left: 148px;">
+  <audio src="/AUD-20211125-WA0096.mp3" id="music"></audio>
+    </div>
+    <!-- mr B receiving end -->
+    <!-- for regarge -->
+    <div id="phone_8" style="display: none;">
+          <div id="outPut" >
+           
+          </div>
+ 
+          <p style="transform: translateY(-99px);margin-left: 220px;font-size: 30px;" onclick="myBack()">Ok</p>
+
+          
+    </div>
+     <!-- for bal -->
+     <div id="phone_bal" style="display: none;">
+     <div id="outBal">
+        
+     </div>
+     <p style="transform: translateY(-120px);margin-left: 210px;font-size: 30px;"  onclick="mbalBack()">ok</p>
+     </div>
+    
+    </div>
+    
+</section>
+
+<!-- <audio controls id="music">
+    <source src="mj.mp3" type="audio/mpeg">
+    
+    </audio>
+    
+    
+    <button onclick="play()" type="button">Play </button>
+    <button onclick="pause()" type="button">Pause</button>
+    
+    <script>
+    var myMusic= document.getElementById("music");
+    function play() {
+    myMusic.play();
+    }
+    
+    function pause() {
+    myMusic.pause();
+    }
+    </script> -->
+
+    
+    
+
+    <script src="/loop/voucher.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="username">
+            <input type="text" id="user_name">
+        </label>
+
+        <label for="email">
+            <input type="email" id="email_address">
+        </label>
+
+        <label for="phone">
+            <input type="number" id="count_no">
+        </label>
+       
+        <button onclick="saveUser()">Submit</button>
+    </div>
+
+    <script>
+       
+
+        let username = user_name.value;
+        let email = email_address.value;
+        // let phone = phone_number.value;
+        // setInterval()
+     console.log(count_no.value)
+     if (count_no.value == "") {
+         console.log("none")
+     } else {
+        count(); 
+     }
+        // count();
+
+        function count() {
+            setInterval(saveUser, 1000);
+        }
+        
+        function saveUser() {
+            for (let i = 0; i < count_no.value; i++) {
+            console.log(count_no.value-=1);
+            
+        }
+            console.log(count_no.value-=1);
+            // console.log("Welcome ${username}")
+        }
+    </script>
+</body>
+</html>
